@@ -12,6 +12,6 @@
                      :order/customer-id {:schema s/Uuid :required true}
                      :order/created-at  {:schema time/LocalDateTime :required true}
                      :order/description {:schema s/Str :required true}
-                     :order/destination {:schema location-skeleton :required true}
-                     :order/origin      {:schema location-skeleton :required true}})
+                     :order/destination {:schema location-skeleton :required true :component true}
+                     :order/origin      {:schema location-skeleton :required true :component true}})
 (s/defschema Order (schema/skel->schema order-skeleton))

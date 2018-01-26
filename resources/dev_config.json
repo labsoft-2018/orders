@@ -1,10 +1,23 @@
 {
   "env": "dev",
+  "service-name": "orders",
+  "service-password": "123456",
   "datomic-endpoint": "datomic:mem://orders",
   "port": 8854,
   "s3-auth": {
     "bucket-name": "labsoft-secrets",
     "region": "us-east-1"
+  },
+  "sqs": {
+    "endpoint": "http://localhost:4576"
+  },
+  "services": {
+    "auth": {
+      "host": "http://localhost:8080",
+      "endpoints": {
+        "service-token": "/api/services/token"
+      }
+    }
   },
   "pub-key-path": "test/pubkey.pem",
   "priv-key-path": "test/privkey.pem"
